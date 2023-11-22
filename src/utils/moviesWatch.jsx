@@ -9,9 +9,4 @@ export const FILMESRECOMENDADOS = [
     nome: "Hindi",
     filmesURL: require("../assets/movies/Hindi.png"),
   },
-  {
-    id: "3",
-    nome: "Telugu",
-    filmesURL: require("../assets/movies/Telugu.png"),
-  },
 ];

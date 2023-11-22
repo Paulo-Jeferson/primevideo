@@ -51,9 +51,6 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
     paddingVertical: 15,
   },
-  contentLista: {
-    
-  },
   filmeTextoAzul: {
     color: '#1A98FF',
     fontSize: 17,
@@ -63,6 +60,7 @@ export const styles = StyleSheet.create({
   },
   contentFilmes: {
     flexDirection: 'row',
+    flexGrow: 0,
+    width: '100%'
   },
-
 });

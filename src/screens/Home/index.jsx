@@ -12,7 +12,12 @@ import { FILMESASSISTINDO } from '../../utils/moviesWatching';
 import { FILMESRECOMENDADOS } from '../../utils/moviesWatch';
 import { FILMESORIGINAIS } from '../../utils/moviesCrimes';
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
+
+  const handleImagePress = () => {
+    navigation.navigate('Comentario');
+  };
+
   return (
     <View style={styles.container}>
 
@@ -40,8 +45,8 @@ export const Home = () => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false} style={styles.contentFilmes}>
-        <TouchableOpacity style={styles.filmeImagemThumb}>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.contentLista}>
+        <TouchableOpacity style={styles.filmeImagemThumb} onPress={handleImagePress}>
           <Image source={MovieTheWhell} style={styles.filmeImagem} />
         </TouchableOpacity>
 

@@ -1,11 +1,9 @@
-import { StatusBar } from "react-native";
-import { Home } from "./src/screens/Home";
+import { Rotas } from "./src/routes";
 
 export default function App() {
   return (
     <>
-      <Home />
-      <StatusBar style="auto" />
+      <Rotas />
     </>
   );
 }

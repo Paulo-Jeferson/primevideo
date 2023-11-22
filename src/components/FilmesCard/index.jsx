@@ -6,7 +6,7 @@ import { styles } from './style';
 export const FilmesCard = (props) => {
   return (
     <TouchableOpacity>
-      <Image source={props.filmeURL} style={styles.img} />
+      <Image source={props.filmesURL} style={styles.img} />
     </TouchableOpacity>
   );
 };
