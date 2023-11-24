@@ -36,31 +36,31 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#FFF',
   },
+  contentLista:{
+
+  },
   filmeImagemThumb: {
+    width: '100%',
     alignItems: 'center',
     overflow: 'hidden',
   },
   filmeImagem: {
     width: '100%',
-    height: 172,
-    resizeMode: 'contain',
+    height: 190,
   },
   filmeTexto: {
     color: '#fff',
     fontSize: 17,
     fontWeight: '700',
     paddingVertical: 15,
-  },
-  filmeTextoAzul: {
-    color: '#1A98FF',
-    fontSize: 17,
-    fontWeight: '700',
-    paddingVertical: 15,
     paddingLeft: 15
   },
-  contentFilmes: {
-    flexDirection: 'row',
-    flexGrow: 0,
-    width: '100%'
+  containerCards: {
+    width: 300,
+    height: 80,
+  },
+  containerImg: {
+    width: 300,
+    height: 80,
   },
 });

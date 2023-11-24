@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  img: {
-    marginLeft: 15,
-    width: 145,
+  containerImg: {
+    width: 300,
     height: 80,
-    resizeMode: 'contain'
+  },
+  img: {
+    width: 300,
+    height: 80,
   }
 });

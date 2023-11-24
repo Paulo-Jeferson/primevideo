@@ -4,7 +4,7 @@ import { styles } from './styles';
 
 import PrimeVideoLogo from '../../assets/prime_video.png';
 import AmazonLogo from '../../assets/amazon_logo.png';
-import MovieTheWhell from '../../assets/movies/the_wheel_of_time.png';
+import MovieTheWhell from '../../../assets/movies/the_wheel_of_time.png';
 
 import { FilmesCard } from '../../components/FilmesCard';
 
@@ -28,20 +28,20 @@ export const Home = ({ navigation }) => {
       </View>
 
       <View style={styles.categoria}>
-        <TouchableOpacity >
-          <Text style={styles.categoriaTexto}>Todos</Text>
+        <TouchableOpacity>
+          <Text style={{ ...styles.categoriaTexto, color: '#fff' }}>Home</Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text style={styles.categoriaTexto}>Filmes</Text>
+          <Text style={{ ...styles.categoriaTexto, color: 'gray' }}>TV Shows</Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text style={styles.categoriaTexto}>Séries</Text>
+          <Text style={{ ...styles.categoriaTexto, color: 'gray' }}>Movies</Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text style={styles.categoriaTexto}>Esportes</Text>
+          <Text style={{ ...styles.categoriaTexto, color: 'gray' }}>Kids</Text>
         </TouchableOpacity>
       </View>
 
@@ -50,43 +50,50 @@ export const Home = ({ navigation }) => {
           <Image source={MovieTheWhell} style={styles.filmeImagem} />
         </TouchableOpacity>
 
-        <Text style={[styles.filmeTexto, { paddingLeft: 15 }]}>Continue assistindo</Text>
+        <Text style={[styles.filmeTexto, { paddingLeft: 15 }]}>Continue Watching</Text>
 
         <FlatList
           data={FILMESASSISTINDO}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <FilmesCard filmeURL={item.filmesURL} />
+            <View style={styles.containerCards}>
+              <TouchableOpacity style={styles.containerImg}>
+                <Image source={item.filmesURL} style={styles.img} />
+              </TouchableOpacity>
+            </View>
           )}
           horizontal
           contentContainerStyle={styles.contentLista}
         />
 
         <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.filmeTextoAzul}>Prime</Text>
-          <Text style={styles.filmeTexto}> Filmes recomendados</Text>
+          <Text style={styles.filmeTexto}>Crime Movies</Text>
         </View>
 
         <FlatList
           data={FILMESORIGINAIS}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <FilmesCard filmeURL={item.filmesURL} />
+            <TouchableOpacity style={styles.containerImg}>
+              <Image source={item.filmesURL} style={styles.img} />
+            </TouchableOpacity>
+
           )}
           horizontal
           contentContainerStyle={styles.contentLista}
         />
 
         <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.filmeTextoAzul}>Prime</Text>
-          <Text style={styles.filmeTexto}> Originais e exclusivos</Text>
+          <Text style={styles.filmeTexto}>Watch in your language</Text>
         </View>
 
         <FlatList
           data={FILMESRECOMENDADOS}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <FilmesCard filmeURL={item.filmesURL} />
+            <TouchableOpacity style={styles.containerImg}>
+              <Image source={item.filmesURL} style={styles.img} />
+            </TouchableOpacity>
           )}
           horizontal
           contentContainerStyle={styles.contentLista}
